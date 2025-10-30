@@ -4,4 +4,18 @@
   <app-main></app-main>
   <app-aside></app-aside>
 </div>
+<div class="servicio-section">
+    <!-- Habilidades -->
+    <div class="habilidades-section">
+      <h3>💻 Habilidades Técnicas</h3>
+      <div class="skills-grid">
+        <div class="skill-card" *ngFor="let habilidad of habilidades">
+          <div class="skill-icon">{{ habilidad.icono }}</div>
+          <h4>{{ habilidad.nombre }}</h4>
+          <span class="skill-badge">{{ habilidad.nivel }}</span>
+          <p>{{ habilidad.descripcion }}</p>
+        </div>
+      </div>
+    </div>
+</div>
 <app-footer></app-footer>
