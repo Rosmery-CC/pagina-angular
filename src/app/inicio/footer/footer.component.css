@@ -1,0 +1,12 @@
+footer {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+footer p {
+  margin: 5px 0;
+  color: #2d3436;
+}

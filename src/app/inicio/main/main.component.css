@@ -1,0 +1,76 @@
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+section {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  font-family: 'Verdana', Geneva, sans-serif;
+  font-size: 1.8em;
+  color: #2d3436;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #ff7675;
+}
+
+section p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+section em {
+  color: #d63031;
+  font-weight: bold;
+}
+
+.university-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.university-links li {
+  margin: 10px 0;
+  padding: 12px;
+  background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.university-links li:hover {
+  transform: translateX(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.university-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.university-links a:hover {
+  color: #2d3436;
+}
+
+.emoji {
+  font-size: 1.2em;
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.5em;
+  }
+  
+  section {
+    padding: 20px;
+  }
+}

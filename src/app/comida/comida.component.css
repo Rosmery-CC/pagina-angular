@@ -1,0 +1,188 @@
+:host {
+  display: block;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 50%, #ffeaa7 100%);
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  color: #2d3436;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  color: #d63031;
+  font-size: 2.8em;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.intro {
+  font-size: 1.2em;
+  color: #636e72;
+}
+
+.emoji {
+  font-size: 1.3em;
+  margin-right: 10px;
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.food-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.food-card:nth-child(1) { animation-delay: 0.1s; }
+.food-card:nth-child(2) { animation-delay: 0.2s; }
+.food-card:nth-child(3) { animation-delay: 0.3s; }
+
+.food-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.food-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.food-card:hover .food-image {
+  transform: scale(1.1);
+}
+
+.food-content {
+  padding: 25px;
+}
+
+h2 {
+  color: #d63031;
+  font-size: 2em;
+  margin-bottom: 15px;
+  font-family: 'Verdana', Geneva, sans-serif;
+  border-bottom: 3px solid #ff7675;
+  padding-bottom: 10px;
+}
+
+.food-content p {
+  font-size: 1.05em;
+  line-height: 1.8;
+  color: #2d3436;
+  margin-bottom: 20px;
+}
+
+.recipe-link {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff7675 0%, #d63031 100%);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(214, 48, 49, 0.3);
+}
+
+.recipe-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(214, 48, 49, 0.4);
+  background: linear-gradient(135deg, #d63031 0%, #ff7675 100%);
+}
+
+.back-button {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.95);
+  color: #2d3436;
+  padding: 15px 30px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.back-button:hover {
+  transform: translateX(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  background: white;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+footer p {
+  color: #636e72;
+  font-size: 0.95em;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+  
+  h2 {
+    font-size: 1.6em;
+  }
+  
+  .food-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  header {
+    padding: 25px;
+  }
+  
+  .food-content {
+    padding: 20px;
+  }
+}

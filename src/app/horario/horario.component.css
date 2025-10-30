@@ -1,0 +1,201 @@
+:host {
+  display: block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  color: #2d3436;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  color: #6c5ce7;
+  font-size: 2.8em;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header p {
+  font-size: 1.2em;
+  color: #636e72;
+}
+
+.emoji {
+  font-size: 1.3em;
+  margin-right: 10px;
+}
+
+.table-wrap {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow-x: auto;
+  margin-bottom: 30px;
+  animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.horario {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.horario thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.horario thead tr th {
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 20px 15px;
+  text-align: center;
+  font-family: 'Verdana', Geneva, sans-serif;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.horario tbody tr {
+  transition: all 0.3s ease;
+}
+
+.horario tbody tr:hover {
+  background: rgba(108, 92, 231, 0.1);
+  transform: scale(1.02);
+}
+
+.horario tbody tr:nth-child(even) {
+  background: rgba(102, 126, 234, 0.05);
+}
+
+.horario tbody td {
+  padding: 18px 15px;
+  text-align: center;
+  border: 2px solid rgba(108, 92, 231, 0.2);
+  font-size: 0.95em;
+  color: #2d3436;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.horario tbody td:hover {
+  background: rgba(108, 92, 231, 0.15);
+  font-weight: bold;
+}
+
+.hora {
+  background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+  color: white !important;
+  font-weight: bold !important;
+  font-family: 'Verdana', Geneva, sans-serif;
+}
+
+.horario tbody td:empty {
+  background: rgba(200, 200, 200, 0.1);
+}
+
+.horario tbody td:empty:hover {
+  background: rgba(200, 200, 200, 0.2);
+}
+
+.back-button {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.95);
+  color: #2d3436;
+  padding: 15px 30px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.back-button:hover {
+  transform: translateX(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  background: white;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+footer p {
+  color: #636e72;
+  font-size: 0.95em;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+  
+  header {
+    padding: 25px;
+  }
+  
+  .table-wrap {
+    padding: 15px;
+  }
+  
+  .horario thead tr th {
+    font-size: 0.85em;
+    padding: 12px 8px;
+  }
+  
+  .horario tbody td {
+    font-size: 0.75em;
+    padding: 10px 5px;
+  }
+  
+  .back-button {
+    font-size: 1em;
+    padding: 12px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .horario thead tr th,
+  .horario tbody td {
+    font-size: 0.7em;
+    padding: 8px 4px;
+  }
+}
